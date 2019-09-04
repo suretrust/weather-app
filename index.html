@@ -11,27 +11,27 @@
     <title>Weather App</title>
 </head>
 
-<body class="bg-dark">
+<body>
+    <nav class="navbar navbar-dark bg-dark py-3 mb-4">
+        <a class="navbar-brand mx-auto font-weight-bold" href="#">WEATHER APP</a>
+    </nav>
     <div class="container">
+        <div class="mx-auto">
 
-        <nav class="navbar navbar-danger text-white">        
-            <a class="navbar-brand text-white mx-auto font-weight-bold" href="#">WEATHER APP</a>
-        </nav>
-
-        <form>
-            <div class="mx-md-5">
-                <div class="d-flex justify-content-between">
-                    <input class="form-control mr-2" type="search" placeholder="Enter city to check weather..." aria-label="Search">
-                    
-                    <button class="btn btn-outline-light mr-2" type="submit">Search</button>
-                    <div class="btn-group" role="group">
-                        <button type="button" class="btn btn-outline-light">&#8451;</button>
-                        <button type="button" class="btn btn-outline-light">&#8457;</button>
+            <div class="alert alert-warning text-center mx-md-5 py-2" role="alert" id="error"></div>
+            
+            <form>
+                <div class="mx-md-5">
+                    <div class="d-flex justify-content-between">
+                        <input id="city" class="form-control mr-2" type="search"
+                            placeholder="Enter city to check weather details..." aria-label="Search">
+                        <button class="btn btn-dark" id="search">Search</button>
                     </div>
                 </div>
-            </div>
-        </form>
-        
+            </form>
+
+            <div id="weather-details"></div>
+        </div>
     </div>
 
     <script src="./main.js"></script>
