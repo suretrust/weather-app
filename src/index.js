@@ -1,1 +1,3 @@
-console.log("I am here");
+import clickListeners from "./clickListeners";
+
+clickListeners();
