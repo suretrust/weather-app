@@ -3,6 +3,7 @@ import apiData from "./apiData";
 import conversion from "./conversion";
 
 const clickListeners = () => {
+    const error = document.getElementById("error");
     error.style.display = "none";
 
     document.addEventListener("click", function (event) {
