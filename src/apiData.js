@@ -44,12 +44,9 @@ const apiData = url => {
                                                 </div>
                                             </div>`;
             }
-            console.log(new Date(res.dt * 1000));
-            console.log(res);
-            console.log(`${res}, ${res.sys.country}`);
         })
         .catch(error => {
-            error.innerText = `${error}`;
+            console.log(error);
         });
 };
 
