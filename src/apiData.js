@@ -33,11 +33,11 @@ const apiData = url => {
                                                 <div class="card-footer bg-transparent border-light">
                                                 
                                                     <div class="d-flex justify-content-between" role="group">
-                                                        <div>
-                                                            <span class="mr-2" id="temp">${res.main.temp}</span>
-                                                            <button type="button" class="btn btn-sm btn-light" id="fahrenheit">°F</button>
+                                                        <div class="temp-box">
+                                                            <span class="temp" id="temp">${res.main.temp}</span>
+                                                            <span class="temp-unit rounded-lg" id="fahrenheit">°F</span>
                                                         </div>
-                                                        <div class="">
+                                                        <div class="my-auto">
                                                             ${moment.unix(res.dt).utcOffset(res.timezone / 60).format('LT')}
                                                         </div>
                                                     </div>
