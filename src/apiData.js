@@ -15,13 +15,13 @@ const apiData = url => {
                 )}, please try again.`;
             } else {
                 error.style.display = "none";
-                weatherDetails.innerHTML = `<div class="card  bg-secondary text-white my-3 mx-md-5 shadow-lg">
+                weatherDetails.innerHTML = `<div class="animated slideInUp card  bg-secondary text-white my-3 mx-md-5 shadow-lg">
                                                 <div class="card-header border-light d-flex justify-content-between">
                                                     <div class="my-auto">
                                                         <h3 class="mb-0">${res.name}, ${res.sys.country}</h3>
                                                         <div class="text-white-50">${moment.unix(res.dt).utcOffset(res.timezone / 60).format('LL')}</div>
                                                     </div>
-                                                    <img src="http://openweathermap.org/img/wn/${res.weather[0].icon}@2x.png" class="img-fluid">
+                                                    <img src="http://openweathermap.org/img/wn/${res.weather[0].icon}@2x.png" class="animated pulse infinite img-fluid">
                                                 </div>
                                                 <div class="card-body text-center">
                                                     <h5 class="card-title font-weight-bold">${capitalizeFirstLetter(res.weather[0].description)}</h5>
