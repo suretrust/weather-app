@@ -11,15 +11,15 @@ const apiData = url => {
             if (res.message) {
                 error.style.display = "block";
                 error.innerText = `${capitalizeFirstLetter(
-          res.message
-        )}, please try again.`;
+                    res.message
+                )}, please try again.`;
             } else {
                 error.style.display = "none";
                 weatherDetails.innerHTML = `<div class="card  bg-secondary text-white my-3 mx-md-5 shadow-lg">
                                                 <div class="card-header border-light d-flex justify-content-between">
                                                     <div class="my-auto">
                                                         <h3 class="mb-0">${res.name}, ${res.sys.country}</h3>
-                                                        <div class="text-white-50">${moment.unix(res.dt).utcOffset(res.timezone/60).format('LL')}</div>
+                                                        <div class="text-white-50">${moment.unix(res.dt).utcOffset(res.timezone / 60).format('LL')}</div>
                                                     </div>
                                                     <img src="http://openweathermap.org/img/wn/${res.weather[0].icon}@2x.png" class="img-fluid">
                                                 </div>
@@ -38,16 +38,14 @@ const apiData = url => {
                                                             <button type="button" class="btn btn-sm btn-light" id="fahrenheit">°F</button>
                                                         </div>
                                                         <div class="">
-                                                            ${moment.unix(res.dt).utcOffset(res.timezone/60).format('LT')}
+                                                            ${moment.unix(res.dt).utcOffset(res.timezone / 60).format('LT')}
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>`;
             }
         })
-        .catch(error => {
-            console.log(error);
-        });
+        .catch(error => error);
 };
 
 export default apiData;
