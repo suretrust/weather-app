@@ -13,9 +13,10 @@ const apiData = url => {
                 error.innerText = `${capitalizeFirstLetter(
                     res.message
                 )}, please try again.`;
+                weatherDetails.innerHTML = ``;
             } else {
                 error.style.display = "none";
-                weatherDetails.innerHTML = `<div class="animated slideInUp card  bg-secondary text-white my-3 mx-md-5 shadow-lg">
+                weatherDetails.innerHTML = `<div class="animated rotateIn card  bg-secondary text-white my-3 mx-md-5 shadow-lg">
                                                 <div class="card-header border-light d-flex justify-content-between">
                                                     <div class="my-auto">
                                                         <h3 class="mb-0">${res.name}, ${res.sys.country}</h3>
