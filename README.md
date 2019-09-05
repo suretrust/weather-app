@@ -17,16 +17,7 @@
 ### 🏠 [Homepage](https://github.com/suretrust/weather-app#readme)
 
 ## Install
-
-```sh
-npm install
-```
-
-## Run tests
-
-```sh
-npm run test
-```
+Clone the repo to your local machine using `https://github.com/suretrust/weather-app.git`. Then install dependencies using the command `npm install`.
 
 ## Author
 
