@@ -1,6 +1,6 @@
 import getInputCity from "./getInputCity";
 import apiData from "./apiData";
-import { hide, showLoading, showFahrenheit, showCelsius } from "./domLogic";
+import { hide, showLoading, showFahrenheit, showCelsius, show } from "./domLogic";
 
 const clickListeners = () => {
     const city = document.getElementById("city");
@@ -13,6 +13,7 @@ const clickListeners = () => {
         if (event.target.id === "search" && city.checkValidity()) {
             hide('error');
             showLoading();
+            show('weather-details');
             apiData(`${apiUrl}${getInputCity()}${apiUnit}${apiKey}`);
             event.preventDefault();
         } else if (event.target.id == "fahrenheit") {

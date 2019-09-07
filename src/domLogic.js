@@ -19,7 +19,7 @@ const showLoading = () => {
                                 </div>`;
 }
 
-const showCityErrorMsg = (message) => {
+const showErrorMsg = (message) => {
     const error = document.getElementById('error');
     error.innerText = `${capitalizeFirstLetter(
         message
@@ -31,7 +31,7 @@ const showWeatherBox = (name, sys, dt, timezone, weather, wind, main) => {
     const weatherDetails = document.getElementById("weather-details");
 
     weatherDetails.innerHTML =
-        `<div class="animated rotateIn card  bg-secondary text-white my-3 mx-md-5 shadow-lg">
+        `<div class="animated rollIn card  bg-secondary text-white my-3 mx-md-5 shadow-lg">
             <div class="card-header border-light d-flex justify-content-between">
                 <div class="my-auto">
                     <h3 class="mb-0">${name}, ${sys.country}</h3>
@@ -81,4 +81,4 @@ const getElement = (id) => {
     return document.getElementById(`${id}`);
 }
 
-export { hide, show, showLoading, showFahrenheit, showCelsius, showCityErrorMsg, showWeatherBox }
+export { hide, show, showLoading, showFahrenheit, showCelsius, showErrorMsg, showWeatherBox }

@@ -1,26 +1,22 @@
-import { hide, showCityErrorMsg, showWeatherBox } from "./domLogic";
+import { hide, showWeatherBox } from "./domLogic";
+import { renderErrors, handleErrors } from "./errorHandleAndRender";
 
 const apiData = url => {
     fetch(url)
-        .then(response => response.json())
-        .then(res => {
-            if (res.message) {
-                showCityErrorMsg(res.message);
-                hide('weather-details');
-            } else {
-                hide('error');
-                showWeatherBox(
-                    res.name,
-                    res.sys,
-                    res.dt,
-                    res.timezone,
-                    res.weather,
-                    res.wind,
-                    res.main
-                );
-            }
+        .then(handleErrors)
+        .then(response => {
+            hide('error');
+            showWeatherBox(
+                response.name,
+                response.sys,
+                response.dt,
+                response.timezone,
+                response.weather,
+                response.wind,
+                response.main
+            );
         })
-        .catch(error => console.log(error));
-};
+        .catch(renderErrors);
+}
 
 export default apiData;
