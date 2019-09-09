@@ -1,0 +1,24 @@
+.content-area {
+    max-width: 576px;
+}
+
+.temp {
+    font-size: 1.2em;
+    padding-right: 3px;
+    display:table-cell;
+    vertical-align:middle;
+}
+
+.temp-box {
+    display:table;
+}
+
+.temp-unit {
+    cursor: pointer;
+    font-size: 1em;
+    padding: 2px 3px;
+    background-color: white;
+    color: black;
+    display: table-cell;
+    vertical-align: middle;
+}
