@@ -27,7 +27,7 @@ const showErrorMsg = (message) => {
     show('error');
 }
 
-const showWeatherBox = (name, sys, dt, timezone, weather, wind, main) => {
+const showWeatherBox = ({ dt, main, name, sys, timezone, weather, wind }) => {
     const weatherDetails = document.getElementById("weather-details");
 
     weatherDetails.innerHTML =

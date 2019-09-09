@@ -5,16 +5,11 @@ const apiData = url => {
     fetch(url)
         .then(handleErrors)
         .then(response => {
+            const { dt, main, name, sys, timezone, weather, wind } = response;
+            const parameters = { dt, main, name, sys, timezone, weather, wind };
+
             hide('error');
-            showWeatherBox(
-                response.name,
-                response.sys,
-                response.dt,
-                response.timezone,
-                response.weather,
-                response.wind,
-                response.main
-            );
+            showWeatherBox(parameters);
         })
         .catch(renderErrors);
 }
