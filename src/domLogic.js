@@ -51,7 +51,7 @@ const showWeatherBox = ({ dt, main, name, sys, timezone, weather, wind }) => {
                 <div class="d-flex justify-content-between" role="group">
                     <div class="temp-box">
                         <span class="temp" id="temp">${main.temp}</span>
-                        <span class="temp-unit rounded-lg" id="fahrenheit">°F</span>
+                        <span class="temp-unit bg-dark rounded-lg" id="fahrenheit">°F</span>
                     </div>
                     <div class="my-auto">
                         ${moment.unix(dt).utcOffset(timezone / 60).format('LT')}

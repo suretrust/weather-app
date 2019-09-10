@@ -2,6 +2,23 @@
     max-width: 576px;
 }
 
+.footer-name {
+    color: red;
+}
+
+.footer-name:hover {
+    color: white;
+    text-decoration: none;
+}
+
+#search {
+    color: red;
+}
+
+#search:hover {
+    color: white;
+}
+
 .temp {
     font-size: 1.2em;
     padding-right: 3px;
@@ -17,8 +34,11 @@
     cursor: pointer;
     font-size: 1em;
     padding: 2px 3px;
-    background-color: white;
-    color: black;
+    color: red;
     display: table-cell;
     vertical-align: middle;
+}
+
+.temp-unit:hover {
+    color: white;
 }
