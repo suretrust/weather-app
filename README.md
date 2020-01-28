@@ -14,7 +14,9 @@
   </a>
 </p>
 
-### 🏠 [Homepage](https://github.com/suretrust/weather-app#readme)
+### 🏠 [Homepage](https://suretrust.github.io/weather-app/)
+
+![Weather](https://i.ibb.co/6nFB9cV/Screenshot-2020-01-28-at-07-54-16.png)
 
 ## Install
 Clone the repo to your local machine using `https://github.com/suretrust/weather-app.git`. Then install dependencies using the command `npm install`.
@@ -22,6 +24,7 @@ Clone the repo to your local machine using `https://github.com/suretrust/weather
 ## Author
 
 * Github: [@suretrust](https://github.com/suretrust)
+* Email: [(Email)](mailto:saholadele@gmail.com)
 
 ## 🤝 Contributing
 
